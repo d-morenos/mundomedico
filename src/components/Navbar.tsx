@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoIcon from "@/assets/logo-icon.jpg";
+import logoText from "@/assets/logo-text.jpg";
 
 const navItems = [
   { label: "Inicio", href: "#inicio" },
