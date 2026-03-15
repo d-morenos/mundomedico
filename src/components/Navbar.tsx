@@ -18,12 +18,8 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="#inicio" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-heading font-bold text-sm">M</span>
-          </div>
-          <span className="font-heading font-semibold text-foreground text-lg hidden sm:inline">
-            Clínica Dental Mundo Médico
-          </span>
+          <img src={logoIcon} alt="Logo Mundo Médico" className="w-9 h-9 object-contain" />
+          <img src={logoText} alt="Clínica Dental Mundo Médico" className="h-8 object-contain hidden sm:block" />
           <span className="font-heading font-semibold text-foreground text-lg sm:hidden">
             Mundo Médico
           </span>
