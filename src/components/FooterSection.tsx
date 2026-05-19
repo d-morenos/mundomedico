@@ -73,7 +73,7 @@ const FooterSection = () => {
           {/* Map */}
           <div className="rounded-2xl overflow-hidden shadow-card h-[320px] lg:h-auto">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.5!2d-70.68!3d-33.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDEyJzAwLjAiUyA3MMKwNDAnNDguMCJX!5e0!3m2!1ses!2scl!4v1700000000000"
+              src="https://www.google.com/maps?q=-33.204922728175774,-70.67528928777486&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, filter: "saturate(0.8)" }}
