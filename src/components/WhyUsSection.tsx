@@ -10,12 +10,7 @@ const features = [
   {
     icon: Accessibility,
     title: "Accesibilidad Total",
-    description: "Entrada, espacios y sanitarios diseñados para personas en silla de ruedas. Espacio 100% accesible.",
-  },
-  {
-    icon: Heart,
-    title: "Ambiente Inclusivo",
-    description: "Espacio seguro LGBTQ+ y amigable para todas las personas. Atención con respeto y empatía.",
+    description: "Entrada diseñada para personas en silla de ruedas, facilitando el acceso a la clínica.",
   },
   {
     icon: MapPin,
