@@ -37,7 +37,7 @@ const WhyUsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {features.map((feat, i) => (
             <motion.div
               key={feat.title}
@@ -45,10 +45,10 @@ const WhyUsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.4 }}
-              className="text-center"
+              className="rounded-2xl bg-card p-8 shadow-card text-center flex flex-col items-center"
             >
-              <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <feat.icon size={24} strokeWidth={1.5} className="text-primary" />
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
+                <feat.icon size={28} strokeWidth={1.5} className="text-primary" />
               </div>
               <h3 className="text-base font-semibold text-foreground mb-2">{feat.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed text-pretty">

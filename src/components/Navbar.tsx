@@ -6,7 +6,7 @@ import logoIcon from "@/assets/logo-icon.jpg";
 const navItems = [
   { label: "Inicio", href: "#inicio" },
   { label: "Especialidades", href: "#especialidades" },
-  { label: "Radiología", href: "#radiologia" },
+  { label: "Equipo", href: "#equipo" },
   { label: "Ubicación", href: "#ubicacion" },
 ];
 
