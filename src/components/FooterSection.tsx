@@ -17,7 +17,7 @@ const FooterSection = () => {
                 <div>
                   <p className="font-medium">Dirección</p>
                   <p className="text-primary-foreground/70 text-sm">
-                    Av. Fontt 022, 032, Colina — Al lado de WOM y Dr. Simi
+                  Av. Fontt 032, Colina — Al lado de WOM y Dr. Simi
                   </p>
                 </div>
               </div>
