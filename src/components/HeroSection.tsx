@@ -17,7 +17,7 @@ const HeroSection = () => {
           >
             <div className="inline-flex items-center gap-2 rounded-full bg-muted px-4 py-1.5 text-sm text-muted-foreground mb-6">
               <MapPin size={14} strokeWidth={1.5} />
-              Av. Fontt 022, Colina
+              Av. Fontt 032, Colina
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] text-foreground text-balance mb-6">
               Sonrisas sanas, vidas felices en el corazón de{" "}
