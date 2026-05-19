@@ -1,6 +1,6 @@
 import { MapPin, Phone, Clock, Coffee } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/56963343550?text=Hola%2C%20quiero%20reservar%20una%20hora";
+const WHATSAPP_URL = "https://wa.me/message/Y5IWA6TBD4SRM1";
 
 const FooterSection = () => {
   return (
