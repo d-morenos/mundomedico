@@ -6,23 +6,38 @@ const GOOGLE_REVIEWS_URL =
 
 const testimonials = [
   {
-    name: "Carolina P.",
-    text: "Excelente atención de principio a fin. La Dra. Constanza explica todo con paciencia y el lugar es impecable. Volveré sin dudarlo.",
+    name: "Dailin León",
+    text: "La atención es maravillosa. Llevo 2 años atendiendo a mi hija con la doctora, a la cual agradezco siempre la evolución que ha tenido mi niña. 🥰",
     rating: 5,
   },
   {
-    name: "Matías R.",
-    text: "Llevo mi tratamiento de ortodoncia con la Dra. Lorena y los resultados son notorios. Profesionales, puntuales y muy amables.",
+    name: "Beatriz Nuñez",
+    text: "Estuve recientemente en un tratamiento dental con la Dra. Moreno y su equipo. Solo tengo que decir que su tratamiento resultó exitoso y que el ambiente es relajado, centrado en el paciente y del todo informado. Su amplia experiencia y dedicación son garantía de éxito.",
     rating: 5,
   },
   {
-    name: "Javiera S.",
-    text: "Súper recomendable. Las asistentes te hacen sentir cómoda y los precios son justos para la calidad que entregan. Una clínica de confianza en Colina.",
+    name: "Felipe Toro Fuentealba",
+    text: "Muy buena atención profesional. Los valores de los tratamientos están un poco debajo del promedio. A un costado de la consulta existe un estacionamiento con costo de solamente la propina a los cuidadores. El tiempo de espera no supera los 10 minutos. La ortodoncista trabaja los lunes en la tarde, desde las 14:00.",
     rating: 5,
   },
   {
-    name: "Felipe A.",
-    text: "Me hicieron radiografías en el momento, sin tener que ir a otro lado. Diagnóstico rápido y trato cercano. Gran experiencia.",
+    name: "Leonel Fuentes",
+    text: "Muy buena la atención, destaco el profesionalismo y la preocupación que tienen con sus pacientes.",
+    rating: 5,
+  },
+  {
+    name: "Cristina Monje Agurto",
+    text: "Excelente equipo de trabajo, super conforme con el trabajo realizado en la dentadura de mi hijo, la recomiendo al 100%.",
+    rating: 5,
+  },
+  {
+    name: "Andrés Infante",
+    text: "Buena atención y un excelente servicio, todos muy cordiales.",
+    rating: 5,
+  },
+  {
+    name: "José Contreras",
+    text: "Excelente clínica, servicio y personal. Recomendado para quienes necesitan un cambio urgente en sus frenillos.",
     rating: 5,
   },
 ];
@@ -60,7 +75,7 @@ const TestimonialsSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
         >
           {testimonials.map((t) => (
             <motion.div
