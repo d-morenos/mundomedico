@@ -25,7 +25,7 @@ const specialties = [
   {
     icon: ScanLine,
     title: "Radiología Dental",
-    description: "Radiografías digitales de última generación, retroalveolares, sin necesidad de derivarte a otro centro.",
+    description: "Radiografías retroalveolares para diagnóstico y detección de patologías del paciente en el momento, sin derivaciones.",
     badge: "En el mismo lugar",
   },
 ];
