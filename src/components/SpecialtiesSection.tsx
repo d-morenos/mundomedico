@@ -5,7 +5,7 @@ const specialties = [
   {
     icon: Stethoscope,
     title: "Ortodoncia",
-    description: "Alineación dental con brackets metálicos, estéticos y alineadores invisibles para niños y adultos.",
+    description: "Alineación dental con brackets metálicos, estéticos e Invisalign® — la opción invisible más avanzada — para niños y adultos.",
   },
   {
     icon: Sparkles,

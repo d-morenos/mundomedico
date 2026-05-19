@@ -17,7 +17,7 @@ const FooterSection = () => {
                 <div>
                   <p className="font-medium">Dirección</p>
                   <p className="text-primary-foreground/70 text-sm">
-                    Av. Fontt 022, 032, Colina — Al lado de WOM y Dr. Simi
+                  Av. Fontt 032, Colina — Al lado de WOM y Dr. Simi
                   </p>
                 </div>
               </div>
@@ -40,7 +40,7 @@ const FooterSection = () => {
                 <div>
                   <p className="font-medium">Horario</p>
                   <p className="text-primary-foreground/70 text-sm tabular-nums">
-                    Lun - Vie: 08:00 – 19:00
+                    Lun - Vie: 08:00 – 20:00
                   </p>
                   <p className="text-primary-foreground/70 text-sm tabular-nums">
                     Sáb: 08:00 – 15:30
