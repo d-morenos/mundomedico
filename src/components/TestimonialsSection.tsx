@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -42,10 +42,17 @@ const VISIBLE = 3;
 
 const TestimonialsSection = () => {
   const [start, setStart] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const total = testimonials.length;
 
-  const prev = () => setStart((s) => (s - 1 + total) % total);
-  const next = () => setStart((s) => (s + 1) % total);
+  const prev = useCallback(() => setStart((s) => (s - 1 + total) % total), [total]);
+  const next = useCallback(() => setStart((s) => (s + 1) % total), [total]);
+
+  useEffect(() => {
+    if (isPaused) return;
+    const id = setInterval(next, 5000);
+    return () => clearInterval(id);
+  }, [isPaused, next]);
 
   const visible = Array.from({ length: VISIBLE }, (_, i) => testimonials[(start + i) % total]);
 
@@ -66,7 +73,13 @@ const TestimonialsSection = () => {
           </p>
         </motion.div>
 
-        <div className="relative max-w-6xl mx-auto">
+        <div
+          className="relative max-w-6xl mx-auto"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={() => setIsPaused(true)}
+          onTouchEnd={() => setIsPaused(false)}
+        >
           <div className="flex items-center gap-4">
             <button
               onClick={prev}
