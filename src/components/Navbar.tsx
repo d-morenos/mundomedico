@@ -18,12 +18,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <a href="#inicio" className="flex items-center gap-3">
+        <a href="#inicio" className="flex items-center gap-3 mr-8">
           <img src={logoIcon} alt="Logo Mundo Médico" className="w-14 h-14 object-contain" />
-          <div className="flex flex-col leading-tight">
-            <span className="font-heading font-bold text-foreground text-lg tracking-tight">Clínica Dental</span>
-            <span className="font-heading font-bold text-primary text-lg tracking-tight">Mundo Médico</span>
-          </div>
+          <span className="font-heading font-bold text-xl md:text-2xl tracking-tight whitespace-nowrap">
+            <span className="text-foreground">Clínica Dental </span>
+            <span className="text-primary">Mundo Médico</span>
+          </span>
         </a>
 
         {/* Desktop */}

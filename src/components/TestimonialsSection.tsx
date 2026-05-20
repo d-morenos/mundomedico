@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
 const GOOGLE_REVIEWS_URL =
   "https://www.google.com/search?q=clinica+dental+mundo+medico+colina#lrd=0x9662bbb162cdc551:0x168184d502f80b24,1";
@@ -26,11 +27,6 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: "Cristina Monje Agurto",
-    text: "Excelente equipo de trabajo, super conforme con el trabajo realizado en la dentadura de mi hijo, la recomiendo al 100%.",
-    rating: 5,
-  },
-  {
     name: "Andrés Infante",
     text: "Buena atención y un excelente servicio, todos muy cordiales.",
     rating: 5,
@@ -42,17 +38,17 @@ const testimonials = [
   },
 ];
 
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 16 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-};
+const VISIBLE = 3;
 
 const TestimonialsSection = () => {
+  const [start, setStart] = useState(0);
+  const total = testimonials.length;
+
+  const prev = () => setStart((s) => (s - 1 + total) % total);
+  const next = () => setStart((s) => (s + 1) % total);
+
+  const visible = Array.from({ length: VISIBLE }, (_, i) => testimonials[(start + i) % total]);
+
   return (
     <section id="testimonios" className="py-24 bg-secondary/40">
       <div className="container">
@@ -70,34 +66,90 @@ const TestimonialsSection = () => {
           </p>
         </motion.div>
 
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
-        >
-          {testimonials.map((t) => (
-            <motion.div
-              key={t.name}
-              variants={item}
-              className="relative rounded-2xl bg-card p-6 shadow-card flex flex-col"
+        <div className="relative max-w-6xl mx-auto">
+          <div className="flex items-center gap-4">
+            <button
+              onClick={prev}
+              aria-label="Anterior"
+              className="hidden md:flex shrink-0 items-center justify-center w-11 h-11 rounded-full bg-card shadow-card text-foreground transition-all hover:shadow-elevated hover:text-primary"
             >
-              <Quote size={28} strokeWidth={1.5} className="text-primary/20 mb-3" />
-              <p className="text-sm text-foreground/80 leading-relaxed text-pretty mb-5 flex-1">
-                "{t.text}"
-              </p>
-              <div className="flex items-center justify-between pt-4 border-t border-border">
-                <span className="text-sm font-semibold text-foreground">{t.name}</span>
-                <div className="flex gap-0.5" aria-label={`${t.rating} de 5 estrellas`}>
-                  {Array.from({ length: t.rating }).map((_, i) => (
-                    <Star key={i} size={14} className="fill-primary text-primary" />
+              <ChevronLeft size={20} />
+            </button>
+
+            <div className="flex-1 overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={start}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.35 }}
+                  className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
+                  {visible.map((t, idx) => (
+                    <div
+                      key={`${start}-${idx}`}
+                      className="relative rounded-2xl bg-card p-6 shadow-card flex flex-col"
+                    >
+                      <Quote size={28} strokeWidth={1.5} className="text-primary/20 mb-3" />
+                      <p className="text-sm text-foreground/80 leading-relaxed text-pretty mb-5 flex-1">
+                        "{t.text}"
+                      </p>
+                      <div className="flex items-center justify-between pt-4 border-t border-border">
+                        <span className="text-sm font-semibold text-foreground">{t.name}</span>
+                        <div className="flex gap-0.5" aria-label={`${t.rating} de 5 estrellas`}>
+                          {Array.from({ length: t.rating }).map((_, i) => (
+                            <Star key={i} size={14} className="fill-primary text-primary" />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   ))}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            <button
+              onClick={next}
+              aria-label="Siguiente"
+              className="hidden md:flex shrink-0 items-center justify-center w-11 h-11 rounded-full bg-card shadow-card text-foreground transition-all hover:shadow-elevated hover:text-primary"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
+
+          {/* Mobile arrows */}
+          <div className="flex md:hidden justify-center gap-4 mt-6">
+            <button
+              onClick={prev}
+              aria-label="Anterior"
+              className="flex items-center justify-center w-11 h-11 rounded-full bg-card shadow-card text-foreground"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button
+              onClick={next}
+              aria-label="Siguiente"
+              className="flex items-center justify-center w-11 h-11 rounded-full bg-card shadow-card text-foreground"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
+
+          {/* Dots */}
+          <div className="flex justify-center gap-2 mt-8">
+            {testimonials.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setStart(i)}
+                aria-label={`Ir a reseña ${i + 1}`}
+                className={`h-2 rounded-full transition-all ${
+                  i === start ? "w-6 bg-primary" : "w-2 bg-border hover:bg-muted-foreground/40"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
 
         <div className="text-center mt-12">
           <a
