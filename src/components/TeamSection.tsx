@@ -4,7 +4,7 @@ const team = [
   { name: "Dra. Constanza Moreno", role: "Odontóloga", initials: "CM" },
   { name: "Dra. Lorena Salazar", role: "Ortodoncista", initials: "LS" },
   { name: "Dannae Rivera", role: "Asistente dental", initials: "DR" },
-  { name: "Lía Sabach", role: "Asistente dental", initials: "LS" },
+  { name: "Lía Sabah", role: "Asistente dental", initials: "LS" },
 ];
 
 const container = {
