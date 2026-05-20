@@ -73,7 +73,13 @@ const TestimonialsSection = () => {
           </p>
         </motion.div>
 
-        <div className="relative max-w-6xl mx-auto">
+        <div
+          className="relative max-w-6xl mx-auto"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={() => setIsPaused(true)}
+          onTouchEnd={() => setIsPaused(false)}
+        >
           <div className="flex items-center gap-4">
             <button
               onClick={prev}
