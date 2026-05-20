@@ -79,27 +79,26 @@ const TestimonialsSection = () => {
         </motion.div>
 
         <div
-          className="relative overflow-hidden marquee-mask"
+          className="relative overflow-hidden"
+          style={{
+            maskImage:
+              "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+          }}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
           onTouchStart={() => setIsPaused(true)}
           onTouchEnd={() => setIsPaused(false)}
         >
-          <motion.div
-            className="flex gap-6 w-max items-stretch"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{
-              duration: 60,
-              ease: "linear",
-              repeat: Infinity,
-            }}
+          <div
+            className="flex gap-6 w-max items-stretch animate-marquee"
             style={{ animationPlayState: isPaused ? "paused" : "running" }}
-            {...(isPaused ? { animate: { x: undefined } } : {})}
           >
             {loop.map((t, i) => (
               <TestimonialCard key={i} t={t} />
             ))}
-          </motion.div>
+          </div>
         </div>
 
         <div className="text-center mt-12">
