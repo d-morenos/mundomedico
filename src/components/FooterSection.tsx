@@ -85,9 +85,9 @@ const FooterSection = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-primary-foreground/10 text-center">
+        <div className="mt-12 pt-6 border-t border-primary-foreground/10 text-center">
           <p className="text-primary-foreground/50 text-sm">
-            © {new Date().getFullYear()} Clínica Dental Mundo Médico. Todos los derechos reservados.
+            © {new Date().getFullYear()} Clínica Dental Mundo Médico · Atendiendo en Colina desde 2010 · Todos los derechos reservados.
           </p>
         </div>
       </div>
