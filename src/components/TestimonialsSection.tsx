@@ -89,7 +89,7 @@ const loop = [...testimonials, ...testimonials];
 const TestimonialCard = ({ t }: { t: (typeof testimonials)[number] }) => (
   <div className="relative rounded-2xl bg-card p-6 shadow-card flex flex-col w-[320px] md:w-[380px] shrink-0">
     <Quote size={28} strokeWidth={1.5} className="text-primary/20 mb-3" />
-    <p className="text-sm text-foreground/80 leading-relaxed text-pretty mb-5 flex-1">
+    <p className="text-sm text-foreground/80 leading-relaxed text-justify hyphens-auto mb-5 flex-1">
       "{t.text}"
     </p>
     <div className="flex items-center justify-between pt-4 border-t border-border">
