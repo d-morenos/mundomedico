@@ -32,8 +32,53 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: "José Contreras",
+    name: "José Tomás Contreras",
     text: "Excelente clínica, servicio y personal. Recomendado para quienes necesitan un cambio urgente en sus frenillos.",
+    rating: 5,
+  },
+  {
+    name: "Ursula Niklitschek",
+    text: "Excelente equipo de profesionales. 100% recomendables! Sin duda una clínica recomendable.",
+    rating: 5,
+  },
+  {
+    name: "Victoria Salgado",
+    text: "Un lugar súper acogedor, la doctora y su asistente son secas! Tuve mi cirugía de extracción de muela del juicio y no tengo nada que decir, una doctora con mucha paciencia y mucho cuidado 🩷",
+    rating: 5,
+  },
+  {
+    name: "Guillermo Trivelli",
+    text: "Recomiendo el servicio clínico dental de Mundo Médico. Extraordinaria la atención de la Dra. Moreno. Me sentí cómodo y escuchado, fue una intervención exitosa.",
+    rating: 5,
+  },
+  {
+    name: "Leydi Sierra Zapata",
+    text: "Estoy satisfecha con el servicio ofrecido, en este centro de salud bucal tienen buena atención y un trabajo impecable, muchas gracias.",
+    rating: 5,
+  },
+  {
+    name: "Daniel Oyaneder",
+    text: "Mi experiencia y la de mi familia en este centro dental ha sido excelente, las doctoras son cercanas, amorosas, confiables y muy profesionales. De verdad es un agrado asistir.",
+    rating: 5,
+  },
+  {
+    name: "Francisca Añasco",
+    text: "Centro médico con una gran profesional, excelente atención y contención, disposición en las urgencias, pero lo más destacado es la gran responsabilidad para sus pacientes.",
+    rating: 5,
+  },
+  {
+    name: "Verónica Vilches",
+    text: "Muy buena atención, preocupación por los pacientes, teniendo en cuenta también darle al paciente poder escoger el horario que más le acomode. Realizan recordatorios de citas al paciente. Muy buena atención 👏",
+    rating: 5,
+  },
+  {
+    name: "Roxana Valencia Acuña",
+    text: "Año y medio, ya casi terminando mi tratamiento de ortodoncia, gracias totales a la doc. A todo el equipo. Mis hijos van quedando con excelentes resultados 😁",
+    rating: 5,
+  },
+  {
+    name: "Keily Barrientos",
+    text: "Excelente personal médico, agradecida con la Dra. Constanza Moreno por su trabajo y dedicación. Tenía un malestar y un dolor molesto en una muela desde hace ya 13 años aprox, fui a varios odontólogos en varios lugares y ninguno pudo descifrar qué tenía; en cambio, ella me detectó la molestia y sanó el malestar. Su trabajo es de maravilla. Recomendada al 100%.",
     rating: 5,
   },
 ];
@@ -44,7 +89,7 @@ const loop = [...testimonials, ...testimonials];
 const TestimonialCard = ({ t }: { t: (typeof testimonials)[number] }) => (
   <div className="relative rounded-2xl bg-card p-6 shadow-card flex flex-col w-[320px] md:w-[380px] shrink-0">
     <Quote size={28} strokeWidth={1.5} className="text-primary/20 mb-3" />
-    <p className="text-sm text-foreground/80 leading-relaxed text-pretty mb-5 flex-1">
+    <p className="text-sm text-foreground/80 leading-relaxed text-justify hyphens-auto mb-5 flex-1">
       "{t.text}"
     </p>
     <div className="flex items-center justify-between pt-4 border-t border-border">

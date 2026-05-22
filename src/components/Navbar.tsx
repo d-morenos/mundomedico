@@ -17,17 +17,21 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
-      <div className="container flex items-center justify-between h-16 md:h-20">
-        <a href="#inicio" className="flex items-center gap-3 mr-8">
-          <img src={logoIcon} alt="Logo Mundo Médico" className="w-14 h-14 object-contain" />
-          <span className="font-heading font-bold text-xl md:text-2xl tracking-tight whitespace-nowrap">
+      <div className="container flex items-center justify-between h-16 md:h-20 gap-3">
+        <a href="#inicio" className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1 lg:flex-none lg:mr-8">
+          <img
+            src={logoIcon}
+            alt="Logo Mundo Médico"
+            className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 object-contain shrink-0"
+          />
+          <span className="font-heading font-bold text-sm sm:text-base md:text-lg lg:text-2xl tracking-tight leading-tight truncate">
             <span className="text-foreground">Clínica Dental </span>
             <span className="text-primary">Mundo Médico</span>
           </span>
         </a>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
             <a
               key={item.href}
@@ -51,7 +55,7 @@ const Navbar = () => {
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden p-2 text-foreground"
+          className="lg:hidden p-2 text-foreground shrink-0"
           aria-label="Menú"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -65,7 +69,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-border overflow-hidden"
+            className="lg:hidden bg-background border-b border-border overflow-hidden"
           >
             <div className="container py-4 flex flex-col gap-4">
               {navItems.map((item) => (
