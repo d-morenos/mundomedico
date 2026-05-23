@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import draLorenaSalazar from "@/assets/dra-lorena-salazar.jpg";
 
 const team = [
   { name: "Dra. Constanza Moreno", role: "Odontóloga", initials: "CM" },
-  { name: "Dra. Lorena Salazar", role: "Ortodoncista", initials: "LS" },
+  { name: "Dra. Lorena Salazar", role: "Ortodoncista", initials: "LS", photo: draLorenaSalazar },
   { name: "Dannae Rivera", role: "Asistente dental", initials: "DR" },
   { name: "Lía Sabah", role: "Asistente dental", initials: "LS" },
 ];
@@ -49,8 +50,17 @@ const TeamSection = () => {
               whileHover={{ y: -4 }}
               className="rounded-2xl bg-card p-6 shadow-card text-center transition-shadow hover:shadow-elevated"
             >
-              <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <span className="text-xl font-semibold text-primary">{member.initials}</span>
+              <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                {member.photo ? (
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                ) : (
+                  <span className="text-xl font-semibold text-primary">{member.initials}</span>
+                )}
               </div>
               <h3 className="text-base font-semibold text-foreground mb-1">{member.name}</h3>
               <p className="text-sm text-muted-foreground">{member.role}</p>
