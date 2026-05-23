@@ -15,7 +15,7 @@ const features = [
   {
     icon: MapPin,
     title: "Ubicación Conveniente",
-    description: "En el Strip Center de Av. Fontt, con fácil acceso, farmacias y bancos a pasos de distancia.",
+    description: "Contamos con estacionamiento exclusivo y nos encuentras a pasos de farmacias, comercios y servicios locales.",
   },
 ];
 
