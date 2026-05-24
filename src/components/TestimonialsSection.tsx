@@ -119,7 +119,7 @@ const TestimonialsSection = () => {
             Lo que dicen nuestros pacientes
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto text-pretty">
-            Opiniones reales de nuestra comunidad en Colina.
+            Opiniones reales de nuestra comunidad.
           </p>
         </motion.div>
 
