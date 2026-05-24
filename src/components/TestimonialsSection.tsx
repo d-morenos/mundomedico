@@ -68,7 +68,7 @@ const testimonials = [
   },
   {
     name: "Verónica Vilches",
-    text: "Muy buena atención, preocupación por los pacientes, teniendo en cuenta también darle al paciente poder escoger el horario que más le acomode. Realizan recordatorios de citas al paciente. Muy buena atención 👏",
+    text: "Muy buena atención, preocupación por los pacientes, teniendo en cuenta también darle al paciente poder escoger el horario que más le acomode. Realizan recordatorios de citas al paciente. 👏",
     rating: 5,
   },
   {
