@@ -42,7 +42,7 @@ const WhyUsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {features.map((feat, i) => (
             <motion.div
               key={feat.title}
