@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Stethoscope, Sparkles, Wrench, Scissors, ScanLine, Badge } from "lucide-react";
+import { Stethoscope, Sparkles, Wrench, Scissors, ScanLine, Badge, Activity, Gem } from "lucide-react";
 
 const specialties = [
   {
