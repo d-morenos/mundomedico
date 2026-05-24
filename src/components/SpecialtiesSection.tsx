@@ -34,7 +34,7 @@ const specialties = [
     badge: "En el mismo lugar",
   },
   {
-    icon: Sparkles,
+    icon: Gem,
     title: "Grillz y Estética Urbana",
     description: "Diseño de joyería dental personalizada y exclusiva para hacer brillar tu sonrisa con el mejor estilo urbano.",
     badge: "Próximamente",
