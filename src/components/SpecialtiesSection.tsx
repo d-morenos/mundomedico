@@ -67,7 +67,7 @@ const SpecialtiesSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Nuestras Especialidades
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto text-pretty">
+          <p className="text-muted-foreground text-lg max-w-4xl mx-auto text-pretty">
             Tecnología dental avanzada sin salir de Colina. Todo lo que necesitas en un solo lugar.
           </p>
         </motion.div>
@@ -77,14 +77,16 @@ const SpecialtiesSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid sm:grid-cols-2 lg:grid-cols-12 gap-6"
         >
           {specialties.map((spec) => (
             <motion.div
               key={spec.title}
               variants={item}
               whileHover={{ y: -4 }}
-              className="relative rounded-2xl bg-card p-6 shadow-card transition-shadow hover:shadow-elevated"
+              className={`relative rounded-2xl bg-card p-6 shadow-card transition-shadow hover:shadow-elevated ${
+                spec.wide ? "lg:col-span-6 lg:col-start-4" : "lg:col-span-4"
+              }`}
             >
               {spec.badge && (
                 <span className="absolute top-4 right-4 inline-flex items-center gap-1 rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
@@ -96,7 +98,7 @@ const SpecialtiesSection = () => {
                 <spec.icon size={22} strokeWidth={1.5} className="text-primary" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">{spec.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed text-pretty">
+              <p className="text-sm text-muted-foreground leading-relaxed text-justify">
                 {spec.description}
               </p>
             </motion.div>
