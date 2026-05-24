@@ -1,32 +1,43 @@
 import { motion } from "framer-motion";
-import { Stethoscope, Sparkles, Wrench, Scissors, ScanLine, Badge } from "lucide-react";
+import { Stethoscope, Sparkles, Wrench, Scissors, ScanLine, Badge, Activity, Gem } from "lucide-react";
 
 const specialties = [
   {
     icon: Stethoscope,
-    title: "Ortodoncia",
-    description: "Alineación dental con brackets metálicos, estéticos e Invisalign® — la opción invisible más avanzada — para niños y adultos.",
+    title: "Ortodoncia y Ortopedia Maxilar",
+    description: "Especialistas en guiar el crecimiento óseo infantil mediante ortopedia maxilar, y en alineación dental avanzada para niños y adultos con brackets metálicos, estéticos e Invisalign®️.",
   },
   {
     icon: Sparkles,
     title: "Estética Dental",
-    description: "Blanqueamiento, carillas, coronas y diseño de sonrisa para resultados naturales y duraderos.",
+    description: "Blanqueamiento, carillas, reconstrucción de piezas dentales y diseño de sonrisa para resultados naturales y duraderos.",
   },
   {
     icon: Wrench,
-    title: "Rehabilitación",
-    description: "Implantes dentales y endodoncia de alta precisión para restaurar la función y estética.",
+    title: "Rehabilitación Oral",
+    description: "Implantes dentales, coronas, prótesis fija y removible, planos de alivio y de relajación, con una alta precisión para mejorar la función y estética.",
+  },
+  {
+    icon: Activity,
+    title: "Endodoncia",
+    description: "Tratamientos de conducto para piezas anteriores y posteriores (vitales y no vitales), enfocados en aliviar el dolor y mantener la integridad de la pieza dentaria.",
   },
   {
     icon: Scissors,
     title: "Cirugía Oral",
-    description: "Cirugía oral y extracciones realizadas con técnicas mínimamente invasivas y máximo confort.",
+    description: "Extracciones realizadas con técnicas mínimamente invasivas y máxima comodidad.",
   },
   {
     icon: ScanLine,
     title: "Radiología Dental",
     description: "Radiografías retroalveolares para diagnóstico y detección de patologías del paciente en el momento, sin derivaciones.",
     badge: "En el mismo lugar",
+  },
+  {
+    icon: Gem,
+    title: "Grillz y Estética Urbana",
+    description: "Diseño de joyería dental personalizada y exclusiva para hacer brillar tu sonrisa con el mejor estilo urbano.",
+    badge: "Próximamente",
   },
 ];
 
