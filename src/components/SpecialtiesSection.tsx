@@ -18,7 +18,7 @@ const specialties = [
     description: "Implantes dentales, coronas, prótesis fija y removible, planos de alivio y de relajación, con una alta precisión para mejorar la función y estética.",
   },
   {
-    icon: Scissors,
+    icon: Activity,
     title: "Endodoncia",
     description: "Tratamientos de conducto para piezas anteriores y posteriores (vitales y no vitales), enfocados en aliviar el dolor y mantener la integridad de la pieza dentaria.",
   },
