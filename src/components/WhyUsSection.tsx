@@ -17,6 +17,11 @@ const features = [
     title: "Ubicación Conveniente",
     description: "Contamos con estacionamiento exclusivo y nos encuentras a pasos de farmacias, comercios y servicios locales.",
   },
+  {
+    icon: Heart,
+    title: "Cuidado sin estrés",
+    description: "Entendemos el miedo al dentista. Contamos con protocolos especiales para la atención de pacientes nerviosos y personas con necesidades especiales, asegurando un trato paciente y humano.",
+  },
 ];
 
 const WhyUsSection = () => {
@@ -37,7 +42,7 @@ const WhyUsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {features.map((feat, i) => (
             <motion.div
               key={feat.title}
@@ -51,7 +56,7 @@ const WhyUsSection = () => {
                 <feat.icon size={28} strokeWidth={1.5} className="text-primary" />
               </div>
               <h3 className="text-base font-semibold text-foreground mb-2">{feat.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed text-pretty">
+              <p className="text-sm text-muted-foreground leading-relaxed text-justify">
                 {feat.description}
               </p>
             </motion.div>
