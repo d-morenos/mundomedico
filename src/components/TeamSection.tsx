@@ -29,7 +29,7 @@ const TeamSection = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Nuestro Equipo
@@ -44,16 +44,16 @@ const TeamSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto"
         >
           {team.map((member) => (
             <motion.div
               key={member.name}
               variants={item}
               whileHover={{ y: -4 }}
-              className="rounded-2xl bg-card p-6 shadow-card text-center transition-shadow hover:shadow-elevated"
+              className="rounded-2xl bg-card p-8 shadow-card text-center transition-shadow hover:shadow-elevated"
             >
-              <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 overflow-hidden">
+              <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5 overflow-hidden">
                 {member.photo ? (
                   <img
                     src={member.photo}
@@ -62,10 +62,10 @@ const TeamSection = () => {
                     loading="lazy"
                   />
                 ) : (
-                  <span className="text-xl font-semibold text-primary">{member.initials}</span>
+                  <span className="text-2xl font-semibold text-primary">{member.initials}</span>
                 )}
               </div>
-              <h3 className="text-base font-semibold text-foreground mb-1">{member.name}</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-1">{member.name}</h3>
               <p className="text-sm text-muted-foreground">{member.role}</p>
             </motion.div>
           ))}
