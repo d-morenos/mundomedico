@@ -85,22 +85,44 @@ const SpecialtiesSection = () => {
               variants={item}
               whileHover={{ y: -4 }}
               className={`relative rounded-2xl bg-card p-6 shadow-card transition-shadow hover:shadow-elevated ${
-                spec.wide ? "lg:col-span-8 lg:col-start-3" : "lg:col-span-4"
+                spec.wide ? "lg:col-span-7 lg:col-start-4" : "lg:col-span-4"
               }`}
             >
-              {spec.badge && (
+              {spec.badge && !spec.wide && (
                 <span className="absolute top-4 right-4 inline-flex items-center gap-1 rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
                   <Badge size={12} strokeWidth={1.5} />
                   {spec.badge}
                 </span>
               )}
-              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                <spec.icon size={22} strokeWidth={1.5} className="text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">{spec.title}</h3>
-              <p className={`text-sm text-muted-foreground leading-relaxed ${spec.wide ? "lg:whitespace-nowrap" : "text-justify"}`}>
-                {spec.description}
-              </p>
+              {spec.wide ? (
+                <div className="flex flex-col">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <spec.icon size={22} strokeWidth={1.5} className="text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">{spec.title}</h3>
+                  <div className="flex items-center gap-2">
+                    <p className="text-sm text-muted-foreground leading-relaxed lg:whitespace-nowrap">
+                      {spec.description}
+                    </p>
+                    {spec.badge && (
+                      <span className="inline-flex items-center gap-1 rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
+                        <Badge size={12} strokeWidth={1.5} />
+                        {spec.badge}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <spec.icon size={22} strokeWidth={1.5} className="text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">{spec.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed text-justify">
+                    {spec.description}
+                  </p>
+                </>
+              )}
             </motion.div>
           ))}
         </motion.div>
