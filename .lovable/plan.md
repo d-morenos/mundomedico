@@ -1,31 +1,18 @@
-## Cambios solicitados
+Plan para ajustar la tarjeta "Grillz y Estética Urbana" en `src/components/SpecialtiesSection.tsx`:
 
-### 1. Eliminar enlace "Radiología" del menú superior
-En `src/components/Navbar.tsx` quitar el item `{ label: "Radiología", href: "#radiologia" }` de la navegación. La especialidad seguirá apareciendo dentro de "Nuestras Especialidades".
+1. **Reducir el ancho de la tarjeta destacada**
+   - Cambiar el grid span de `lg:col-span-8 lg:col-start-3` a `lg:col-span-6 lg:col-start-4`.
+   - Esto la hace más compacta visualmente (50% del ancho del grid en escritorio), sin perder el carácter de tarjeta destacada.
 
-### 2. Ajustar descripción de Radiología Dental
-En `src/components/SpecialtiesSection.tsx` actualizar el texto a:
-> "Radiografías retroalveolares para diagnóstico y detección de patologías del paciente en el momento, sin derivaciones."
+2. **Mantener la descripción en una sola línea**
+   - Conservar la clase `lg:whitespace-nowrap` en la descripción de la tarjeta ancha.
+   - Verificar que el texto completo "Diseño de joyería dental personalizada y exclusiva para hacer brillar tu sonrisa con el mejor estilo urbano." no se parta en dos líneas con el nuevo ancho.
 
-### 3. Nueva sección "Nuestro Equipo"
-Crear `src/components/TeamSection.tsx` y montarla en `src/pages/Index.tsx` entre `SpecialtiesSection` y `WhyUsSection`. Incluir id `#equipo` y agregar el enlace correspondiente en `Navbar.tsx`.
+3. **Alinear "Próximamente" al final de la descripción**
+   - Reorganizar el contenido interno de la tarjeta ancha para que el badge ya no esté posicionado absoluto en la esquina superior derecha de la tarjeta.
+   - Usar un contenedor flex dentro de la tarjeta ancha que ubique el icono, título y descripción a la izquierda, y el badge a la derecha.
+   - Alinear el badge al final inferior de la descripción (misma línea), de modo que su borde derecho quede alineado con el final de la línea de descripción.
 
-Tarjetas (avatar con iniciales sobre fondo `bg-primary/10`, nombre, rol):
-- Dra. Constanza Moreno — Odontóloga
-- Dra. Lorena Salazar — Ortodoncista
-- Dannae Rivera — Asistente dental
-- Lía Sabach — Asistente dental
-
-Layout: grid `sm:grid-cols-2 lg:grid-cols-4`, cards `rounded-2xl bg-card shadow-card`, animación stagger con framer-motion (mismo patrón que `SpecialtiesSection`).
-
-### 4. Rediseñar "¿Por qué elegirnos?" — centrado y equilibrado
-En `src/components/WhyUsSection.tsx`:
-- Cambiar grid de 4 columnas a 3 (`sm:grid-cols-1 md:grid-cols-3`), ya que actualmente hay 3 features y queda desbalanceado en 4 columnas.
-- Envolver el grid en `max-w-5xl mx-auto` para centralizarlo.
-- Aumentar tamaño del ícono (círculo 16x16) y agregar `gap-8` entre tarjetas.
-- Cada feature dentro de un contenedor `rounded-2xl bg-card p-8 shadow-card` para dar peso visual uniforme y simetría.
-
-### Notas técnicas
-- Sin cambios de tokens de diseño ni dependencias nuevas.
-- Mantener tokens semánticos existentes (`bg-card`, `text-primary`, etc.).
-- Actualizar `mem://features/navigation-menu` solo si se requiere — propondré edición tras implementar.
+4. **Verificación**
+   - Ejecutar `tsc --noEmit` y `vite build` para confirmar que no hay errores de tipo ni de compilación.
+   - Capturar screenshot del preview para validar visualmente el ancho reducido, la descripción en una línea y la alineación del badge.
