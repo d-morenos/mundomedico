@@ -97,7 +97,7 @@ const SpecialtiesSection = () => {
               {spec.wide ? (
                 <div className="flex flex-col">
                   {spec.badge && (
-                    <span className="absolute top-4 right-5 inline-flex items-center gap-1 rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
+                    <span className="absolute top-4 right-6 inline-flex items-center gap-1 rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
                       <Badge size={12} strokeWidth={1.5} />
                       {spec.badge}
                     </span>
