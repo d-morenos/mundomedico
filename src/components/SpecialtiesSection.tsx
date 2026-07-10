@@ -85,7 +85,7 @@ const SpecialtiesSection = () => {
               variants={item}
               whileHover={{ y: -4 }}
               className={`relative rounded-2xl bg-card shadow-card transition-shadow hover:shadow-elevated ${
-                spec.wide ? "lg:col-span-8 lg:col-start-3 p-6" : "lg:col-span-4 p-6"
+                spec.wide ? "lg:col-span-full lg:w-fit lg:mx-auto p-6" : "lg:col-span-4 p-6"
               }`}
             >
               {spec.badge && !spec.wide && (
