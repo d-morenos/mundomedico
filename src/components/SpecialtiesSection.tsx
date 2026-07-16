@@ -108,7 +108,7 @@ const SpecialtiesSection = () => {
                     <spec.icon size={22} strokeWidth={1.5} className="text-primary" />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">{spec.title}</h3>
-                  <p className="text-xs sm:text-[13px] lg:text-sm text-muted-foreground leading-relaxed whitespace-nowrap">
+                  <p className="text-xs sm:text-xs lg:text-sm text-muted-foreground leading-relaxed whitespace-nowrap">
                     {spec.description}
                   </p>
                 </div>
