@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Phone, MapPin } from "lucide-react";
-import heroImage from "@/assets/hero-clinic.jpg";
+import heroImage from "@/assets/hero-clinic.jpg.asset.json";
 
 const WHATSAPP_URL = "https://wa.me/message/Y5IWA6TBD4SRM1";
 
