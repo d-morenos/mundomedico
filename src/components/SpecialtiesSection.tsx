@@ -85,7 +85,9 @@ const SpecialtiesSection = () => {
               variants={item}
               whileHover={{ y: -4 }}
               className={`relative rounded-2xl bg-card shadow-card transition-shadow hover:shadow-elevated ${
-                spec.wide ? "lg:col-span-full lg:w-fit lg:mx-auto p-6" : "lg:col-span-4 p-6"
+                spec.wide
+                  ? "sm:col-span-2 lg:col-span-full sm:w-fit lg:w-fit sm:mx-auto lg:mx-auto p-6"
+                  : "lg:col-span-4 p-6"
               }`}
             >
               {spec.badge && !spec.wide && (
@@ -106,7 +108,7 @@ const SpecialtiesSection = () => {
                     <spec.icon size={22} strokeWidth={1.5} className="text-primary" />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">{spec.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed whitespace-nowrap">
+                  <p className="text-xs sm:text-[13px] lg:text-sm text-muted-foreground leading-relaxed sm:whitespace-nowrap">
                     {spec.description}
                   </p>
                 </div>
