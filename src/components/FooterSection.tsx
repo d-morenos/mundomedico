@@ -6,7 +6,7 @@ const FooterSection = () => {
   return (
     <footer id="ubicacion" className="pt-24 pb-10 bg-foreground text-primary-foreground">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-0 lg:gap-12">
           {/* Info */}
           <div>
             <h2 className="font-heading text-3xl font-bold mb-8">Encuéntranos</h2>
