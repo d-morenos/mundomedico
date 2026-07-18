@@ -4,7 +4,7 @@ const WHATSAPP_URL = "https://wa.me/message/Y5IWA6TBD4SRM1";
 
 const FooterSection = () => {
   return (
-    <footer id="ubicacion" className="pt-24 pb-6 bg-foreground text-primary-foreground">
+    <footer id="ubicacion" className="pt-24 pb-10 bg-foreground text-primary-foreground">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Info */}
