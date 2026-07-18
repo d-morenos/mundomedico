@@ -59,15 +59,17 @@ const FooterSection = () => {
               </div>
             </div>
 
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-8 rounded-lg bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-all hover:opacity-90"
-            >
-              <Phone size={18} strokeWidth={1.5} />
-              Reserva tu hora por WhatsApp
-            </a>
+            <div className="mt-8 md:mb-8 lg:mb-0 md:flex md:justify-center lg:block">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-all hover:opacity-90"
+              >
+                <Phone size={18} strokeWidth={1.5} />
+                Reserva tu hora por WhatsApp
+              </a>
+            </div>
           </div>
 
           {/* Map */}
