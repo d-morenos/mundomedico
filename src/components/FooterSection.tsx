@@ -6,12 +6,12 @@ const FooterSection = () => {
   return (
     <footer id="ubicacion" className="pt-24 pb-10 bg-foreground text-primary-foreground">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-0 lg:gap-12">
           {/* Info */}
           <div>
             <h2 className="font-heading text-3xl font-bold mb-8">Encuéntranos</h2>
 
-            <div className="space-y-5">
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-1">
               <div className="flex items-start gap-3">
                 <MapPin size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
                 <div>
@@ -59,15 +59,17 @@ const FooterSection = () => {
               </div>
             </div>
 
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-8 rounded-lg bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-all hover:opacity-90"
-            >
-              <Phone size={18} strokeWidth={1.5} />
-              Reserva tu hora por WhatsApp
-            </a>
+            <div className="mt-8 md:mb-8 lg:mb-0 md:flex md:justify-center lg:block">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-all hover:opacity-90"
+              >
+                <Phone size={18} strokeWidth={1.5} />
+                Reserva tu hora por WhatsApp
+              </a>
+            </div>
           </div>
 
           {/* Map */}
