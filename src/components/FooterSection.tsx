@@ -11,7 +11,7 @@ const FooterSection = () => {
           <div>
             <h2 className="font-heading text-3xl font-bold mb-8">Encuéntranos</h2>
 
-            <div className="space-y-5">
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-1">
               <div className="flex items-start gap-3">
                 <MapPin size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
                 <div>
