@@ -11,7 +11,7 @@ const FooterSection = () => {
           <div>
             <h2 className="font-heading text-3xl font-bold mb-6 text-center">Encuéntranos</h2>
 
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-1">
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:items-center md:gap-8 lg:grid-cols-1">
               <div className="flex items-start gap-3">
                 <MapPin size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
                 <div>
@@ -22,7 +22,7 @@ const FooterSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-3 md:justify-end">
                 <Phone size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Teléfonos</p>
@@ -48,7 +48,7 @@ const FooterSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-3 md:justify-end">
                 <Coffee size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Pausa Almuerzo</p>
