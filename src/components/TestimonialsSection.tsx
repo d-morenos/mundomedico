@@ -137,7 +137,7 @@ const TestimonialsSection = () => {
           onTouchEnd={() => setIsPaused(false)}
         >
           <div
-            className="flex gap-6 w-max items-stretch animate-marquee"
+            className="flex gap-4 sm:gap-6 w-max items-stretch animate-marquee"
             style={{ animationPlayState: isPaused ? "paused" : "running" }}
           >
             {loop.map((t, i) => (
