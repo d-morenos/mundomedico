@@ -107,18 +107,18 @@ const TestimonialsSection = () => {
   const [isPaused, setIsPaused] = useState(false);
 
   return (
-    <section id="testimonios" className="py-24 bg-secondary/40">
+    <section id="testimonios" className="py-16 sm:py-24 bg-secondary/40">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3 md:mb-4">
             Lo que dicen nuestros pacientes
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto text-pretty">
+          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto text-pretty">
             Opiniones reales de nuestra comunidad.
           </p>
         </motion.div>
