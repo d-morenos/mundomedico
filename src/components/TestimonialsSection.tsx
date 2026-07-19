@@ -87,16 +87,16 @@ const testimonials = [
 const loop = [...testimonials, ...testimonials];
 
 const TestimonialCard = ({ t }: { t: (typeof testimonials)[number] }) => (
-  <div className="relative rounded-2xl bg-card p-6 shadow-card flex flex-col w-[320px] md:w-[380px] shrink-0">
-    <Quote size={28} strokeWidth={1.5} className="text-primary/20 mb-3" />
-    <p className="text-sm text-foreground/80 leading-relaxed text-justify mb-5 flex-1">
+  <div className="relative rounded-2xl bg-card p-4 sm:p-5 md:p-6 shadow-card flex flex-col w-[260px] sm:w-[320px] md:w-[380px] shrink-0">
+    <Quote strokeWidth={1.5} className="text-primary/20 mb-3 w-6 h-6 sm:w-7 sm:h-7" />
+    <p className="text-xs sm:text-sm text-foreground/80 leading-relaxed text-justify mb-4 sm:mb-5 flex-1">
       "{t.text}"
     </p>
     <div className="flex items-center justify-between pt-4 border-t border-border">
-      <span className="text-sm font-semibold text-foreground">{t.name}</span>
+      <span className="text-xs sm:text-sm font-semibold text-foreground">{t.name}</span>
       <div className="flex gap-0.5" aria-label={`${t.rating} de 5 estrellas`}>
         {Array.from({ length: t.rating }).map((_, i) => (
-          <Star key={i} size={14} className="fill-primary text-primary" />
+          <Star key={i} size={12} className="sm:w-3.5 sm:h-3.5 fill-primary text-primary" />
         ))}
       </div>
     </div>
@@ -107,18 +107,18 @@ const TestimonialsSection = () => {
   const [isPaused, setIsPaused] = useState(false);
 
   return (
-    <section id="testimonios" className="py-24 bg-secondary/40">
+    <section id="testimonios" className="py-16 sm:py-24 bg-secondary/40">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3 md:mb-4">
             Lo que dicen nuestros pacientes
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto text-pretty">
+          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto text-pretty">
             Opiniones reales de nuestra comunidad.
           </p>
         </motion.div>
@@ -137,7 +137,7 @@ const TestimonialsSection = () => {
           onTouchEnd={() => setIsPaused(false)}
         >
           <div
-            className="flex gap-6 w-max items-stretch animate-marquee"
+            className="flex gap-4 sm:gap-6 w-max items-stretch animate-marquee"
             style={{ animationPlayState: isPaused ? "paused" : "running" }}
           >
             {loop.map((t, i) => (
