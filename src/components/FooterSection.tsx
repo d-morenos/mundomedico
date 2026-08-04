@@ -22,7 +22,7 @@ const FooterSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 md:justify-end">
+              <div className="flex items-start gap-3 md:justify-end lg:justify-start">
                 <Phone size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Teléfonos</p>
@@ -48,7 +48,7 @@ const FooterSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 md:justify-end">
+              <div className="flex items-start gap-3 md:justify-end lg:justify-start">
                 <Coffee size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Pausa Almuerzo</p>
