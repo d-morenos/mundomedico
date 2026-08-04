@@ -6,7 +6,7 @@ const FooterSection = () => {
   return (
     <footer id="ubicacion" className="pt-16 pb-10 bg-foreground text-primary-foreground">
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-0 lg:gap-12">
+        <div className="grid grid-cols-1 gap-12">
           {/* Info */}
           <div>
             <h2 className="font-heading text-3xl font-bold mb-6 text-center">Encuéntranos</h2>
@@ -22,7 +22,7 @@ const FooterSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 md:justify-end">
+              <div className="flex items-start gap-3 md:justify-end lg:justify-start">
                 <Phone size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Teléfonos</p>
@@ -48,7 +48,7 @@ const FooterSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 md:justify-end">
+              <div className="flex items-start gap-3 md:justify-end lg:justify-start">
                 <Coffee size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Pausa Almuerzo</p>
@@ -59,7 +59,7 @@ const FooterSection = () => {
               </div>
             </div>
 
-            <div className="mt-8 md:mb-8 lg:mb-0 md:flex md:justify-center lg:block">
+            <div className="mt-8 md:mb-8 md:flex md:justify-center">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
@@ -73,7 +73,7 @@ const FooterSection = () => {
           </div>
 
           {/* Map */}
-          <div className="rounded-2xl overflow-hidden shadow-card h-[320px] lg:h-auto">
+          <div className="rounded-2xl overflow-hidden shadow-card h-[320px] lg:h-[420px]">
             <iframe
               src="https://www.google.com/maps?q=-33.204922728175774,-70.67528928777486&output=embed"
               width="100%"
