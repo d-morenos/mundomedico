@@ -6,18 +6,18 @@ const FooterSection = () => {
   return (
     <footer id="ubicacion" className="pt-16 pb-10 bg-foreground text-primary-foreground">
       <div className="container">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-          {/* Info */}
-          <div>
-            <h2 className="font-heading text-3xl font-bold mb-6 text-center">Encuéntranos</h2>
+        <h2 className="font-heading text-3xl font-bold mb-6 text-center">Encuéntranos</h2>
 
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+          {/* Info + WhatsApp */}
+          <div className="flex flex-col justify-between">
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:items-center md:gap-8 lg:grid-cols-1">
               <div className="flex items-start gap-3">
                 <MapPin size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Dirección</p>
                   <p className="text-primary-foreground/70 text-sm">
-                  Av. Fontt 032, Colina — Al lado de WOM y Dr. Simi
+                    Av. Fontt 032, Colina — Al lado de WOM y Dr. Simi
                   </p>
                 </div>
               </div>
@@ -59,7 +59,7 @@ const FooterSection = () => {
               </div>
             </div>
 
-            <div className="mt-8 md:mb-8 md:flex md:justify-center">
+            <div className="mt-8 flex justify-center lg:mt-0">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
