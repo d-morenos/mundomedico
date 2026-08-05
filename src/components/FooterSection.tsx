@@ -11,50 +11,52 @@ const FooterSection = () => {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           {/* Info + WhatsApp */}
           <div className="flex flex-col justify-between">
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:items-center md:gap-8 lg:grid-cols-1">
-              <div className="flex items-start gap-3">
-                <MapPin size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
-                <div>
-                  <p className="font-medium">Dirección</p>
-                  <p className="text-primary-foreground/70 text-sm">
-                    Av. Fontt 032, Colina — Al lado de WOM y Dr. Simi
-                  </p>
+            <div className="lg:flex-1 lg:flex lg:flex-col lg:justify-end">
+              <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:items-center md:gap-8 lg:grid-cols-1">
+                <div className="flex items-start gap-3">
+                  <MapPin size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
+                  <div>
+                    <p className="font-medium">Dirección</p>
+                    <p className="text-primary-foreground/70 text-sm">
+                      Av. Fontt 032, Colina — Al lado de WOM y Dr. Simi
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              <div className="flex items-start gap-3 md:justify-end lg:justify-start">
-                <Phone size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
-                <div>
-                  <p className="font-medium">Teléfonos</p>
-                  <p className="text-primary-foreground/70 text-sm tabular-nums">
-                    Fijo: (2) 2844 9710
-                  </p>
-                  <p className="text-primary-foreground/70 text-sm tabular-nums">
-                    WhatsApp: +56 9 6334 3550
-                  </p>
+                <div className="flex items-start gap-3 md:justify-end lg:justify-start">
+                  <Phone size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
+                  <div>
+                    <p className="font-medium">Teléfonos</p>
+                    <p className="text-primary-foreground/70 text-sm tabular-nums">
+                      Fijo: (2) 2844 9710
+                    </p>
+                    <p className="text-primary-foreground/70 text-sm tabular-nums">
+                      WhatsApp: +56 9 6334 3550
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              <div className="flex items-start gap-3">
-                <Clock size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
-                <div>
-                  <p className="font-medium">Horario</p>
-                  <p className="text-primary-foreground/70 text-sm tabular-nums">
-                    Lun - Vie: 08:00 – 20:00
-                  </p>
-                  <p className="text-primary-foreground/70 text-sm tabular-nums">
-                    Sáb: 08:00 – 15:30
-                  </p>
+                <div className="flex items-start gap-3">
+                  <Clock size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
+                  <div>
+                    <p className="font-medium">Horario</p>
+                    <p className="text-primary-foreground/70 text-sm tabular-nums">
+                      Lun - Vie: 08:00 – 20:00
+                    </p>
+                    <p className="text-primary-foreground/70 text-sm tabular-nums">
+                      Sáb: 08:00 – 15:30
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              <div className="flex items-start gap-3 md:justify-end lg:justify-start">
-                <Coffee size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
-                <div>
-                  <p className="font-medium">Pausa Almuerzo</p>
-                  <p className="text-primary-foreground/70 text-sm tabular-nums">
-                    13:00 – 14:00 (Lunes a Sábado)
-                  </p>
+                <div className="flex items-start gap-3 md:justify-end lg:justify-start">
+                  <Coffee size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
+                  <div>
+                    <p className="font-medium">Pausa Almuerzo</p>
+                    <p className="text-primary-foreground/70 text-sm tabular-nums">
+                      13:00 – 14:00 (Lunes a Sábado)
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
