@@ -8,29 +8,16 @@ const FooterSection = () => {
       <div className="container">
         <h2 className="font-heading text-3xl font-bold mb-6 text-center">Encuéntranos</h2>
 
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           {/* Info + WhatsApp */}
           <div className="flex flex-col justify-center">
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-x-8 lg:grid-cols-1">
+            <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-x-8">
               <div className="flex items-start gap-3">
                 <MapPin size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Dirección</p>
                   <p className="text-primary-foreground/70 text-sm">
                     Av. Fontt 032, Colina — Al lado de WOM y Dr. Simi
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <Phone size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
-                <div>
-                  <p className="font-medium">Teléfonos</p>
-                  <p className="text-primary-foreground/70 text-sm tabular-nums">
-                    Fijo: (2) 2844 9710
-                  </p>
-                  <p className="text-primary-foreground/70 text-sm tabular-nums">
-                    WhatsApp: +56 9 6334 3550
                   </p>
                 </div>
               </div>
@@ -44,6 +31,19 @@ const FooterSection = () => {
                   </p>
                   <p className="text-primary-foreground/70 text-sm tabular-nums">
                     Sáb: 08:00 – 15:30
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <Phone size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
+                <div>
+                  <p className="font-medium">Teléfonos</p>
+                  <p className="text-primary-foreground/70 text-sm tabular-nums">
+                    Fijo: (2) 2844 9710
+                  </p>
+                  <p className="text-primary-foreground/70 text-sm tabular-nums">
+                    WhatsApp: +56 9 6334 3550
                   </p>
                 </div>
               </div>
@@ -73,17 +73,19 @@ const FooterSection = () => {
           </div>
 
           {/* Map */}
-          <div className="rounded-2xl overflow-hidden shadow-card h-[320px] md:h-[420px]">
-            <iframe
-              src="https://www.google.com/maps?q=-33.204922728175774,-70.67528928777486&output=embed"
-              width="100%"
-              height="100%"
-              style={{ border: 0, filter: "saturate(0.8)" }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Ubicación Clínica Dental Mundo Médico en Colina"
-            />
+          <div className="flex items-center justify-center">
+            <div className="rounded-2xl overflow-hidden shadow-card w-full h-[320px] lg:h-[300px] lg:max-w-md">
+              <iframe
+                src="https://www.google.com/maps?q=-33.204922728175774,-70.67528928777486&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, filter: "saturate(0.8)" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ubicación Clínica Dental Mundo Médico en Colina"
+              />
+            </div>
           </div>
         </div>
 
