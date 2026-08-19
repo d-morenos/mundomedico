@@ -74,7 +74,7 @@ const FooterSection = () => {
 
           {/* Map */}
           <div className="flex items-center justify-center">
-            <div className="rounded-2xl overflow-hidden shadow-card w-full h-[320px] lg:h-[300px] lg:max-w-md">
+            <div className="rounded-2xl overflow-hidden shadow-card w-full h-[320px] lg:h-[360px]">
               <iframe
                 src="https://www.google.com/maps?q=-33.204922728175774,-70.67528928777486&output=embed"
                 width="100%"
