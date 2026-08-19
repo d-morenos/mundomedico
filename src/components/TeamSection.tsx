@@ -1,14 +1,10 @@
 import { motion } from "framer-motion";
 import constanza from "@/assets/Constanza.png.asset.json";
 import lorena from "@/assets/Lorena.png.asset.json";
-import danae from "@/assets/Danae.png.asset.json";
-import lia from "@/assets/Lia.png.asset.json";
 
 const team = [
   { name: "Dra. Constanza Moreno", role: "Odontóloga", initials: "CM", photo: constanza.url },
   { name: "Dra. Lorena Salazar", role: "Ortodoncista", initials: "LS", photo: lorena.url },
-  { name: "Dannae Rivera", role: "Asistente dental", initials: "DR", photo: danae.url },
-  { name: "Lía Sabah", role: "Asistente dental", initials: "LS", photo: lia.url },
 ];
 
 const container = {
@@ -44,7 +40,7 @@ const TeamSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto"
+          className="grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto"
         >
           {team.map((member) => (
             <motion.div
