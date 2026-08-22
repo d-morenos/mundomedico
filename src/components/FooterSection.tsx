@@ -82,7 +82,7 @@ const FooterSection = () => {
                   <Instagram size={20} className="text-white" strokeWidth={2} />
                 </span>
                 <span className="ml-3 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#f09433] to-[#bc1888]">
-                  Síguenos!
+                  Síguenos en Instagram!
                 </span>
               </a>
             </div>
