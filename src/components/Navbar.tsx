@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Instagram } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logoIcon from "@/assets/logo-icon.png";
+
+const INSTAGRAM_URL = "https://www.instagram.com/clinicamundomedico?igsi=d2tsb2Rnc3hrcGNt";
 
 const navItems = [
   { label: "Inicio", href: "#inicio" },
@@ -41,6 +43,15 @@ const Navbar = () => {
               {item.label}
             </a>
           ))}
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Síguenos en Instagram"
+            className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-tr from-[#f09433] via-[#e6683c] via-[#dc2743] via-[#cc2366] to-[#bc1888] shadow-elevated transition-transform hover:scale-105"
+          >
+            <Instagram size={20} className="text-white" strokeWidth={2} />
+          </a>
           <a
             href={WHATSAPP_URL}
             target="_blank"
