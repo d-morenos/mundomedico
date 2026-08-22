@@ -60,7 +60,7 @@ const FooterSection = () => {
               </div>
             </div>
 
-            <div className="mt-8 flex justify-center">
+            <div className="mt-8 flex flex-col items-center gap-4">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
@@ -69,6 +69,21 @@ const FooterSection = () => {
               >
                 <Phone size={18} strokeWidth={1.5} />
                 Reserva tu hora por WhatsApp
+              </a>
+
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-full bg-white pl-1 pr-6 py-1 shadow-md transition-transform hover:scale-105"
+                aria-label="Síguenos en Instagram"
+              >
+                <span className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-tr from-[#f09433] via-[#e6683c] via-[#dc2743] via-[#cc2366] to-[#bc1888]">
+                  <Instagram size={20} className="text-white" strokeWidth={2} />
+                </span>
+                <span className="ml-3 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#f09433] to-[#bc1888]">
+                  Síguenos!
+                </span>
               </a>
             </div>
           </div>
