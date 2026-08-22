@@ -44,6 +44,15 @@ const Navbar = () => {
             </a>
           ))}
           <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Síguenos en Instagram"
+            className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-tr from-[#f09433] via-[#e6683c] via-[#dc2743] via-[#cc2366] to-[#bc1888] shadow-elevated transition-transform hover:scale-105"
+          >
+            <Instagram size={20} className="text-white" strokeWidth={2} />
+          </a>
+          <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
