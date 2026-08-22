@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Instagram } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logoIcon from "@/assets/logo-icon.png";
+
+const INSTAGRAM_URL = "https://www.instagram.com/clinicamundomedico?igsi=d2tsb2Rnc3hrcGNt";
 
 const navItems = [
   { label: "Inicio", href: "#inicio" },
