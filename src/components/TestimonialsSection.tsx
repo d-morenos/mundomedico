@@ -86,8 +86,14 @@ const testimonials = [
 // Duplicate testimonials to create a seamless loop
 const loop = [...testimonials, ...testimonials];
 
-const TestimonialCard = ({ t }: { t: (typeof testimonials)[number] }) => (
-  <div className="relative rounded-2xl bg-card p-3 sm:p-5 md:p-6 shadow-card flex flex-col w-[240px] sm:w-[320px] md:w-[380px] shrink-0">
+const TestimonialCard = ({
+  t,
+  className = "w-[240px] sm:w-[320px] md:w-[380px] shrink-0",
+}: {
+  t: (typeof testimonials)[number];
+  className?: string;
+}) => (
+  <div className={`relative rounded-2xl bg-card p-4 sm:p-5 md:p-6 shadow-card flex flex-col ${className}`}>
     <Quote strokeWidth={1.5} className="text-primary/20 mb-2 sm:mb-3 w-5 h-5 sm:w-7 sm:h-7" />
     <p className="text-xs sm:text-sm text-foreground/80 leading-snug sm:leading-relaxed text-justify mb-2 sm:mb-5 flex-1">
       "{t.text}"
