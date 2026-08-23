@@ -129,8 +129,16 @@ const TestimonialsSection = () => {
           </p>
         </motion.div>
 
+        {/* Móvil: lista vertical estática y compacta */}
+        <div className="md:hidden flex flex-col gap-3">
+          {testimonials.slice(0, 6).map((t, i) => (
+            <TestimonialCard key={i} t={t} className="w-full" />
+          ))}
+        </div>
+
+        {/* Tablet y desktop: carrusel */}
         <div
-          className="relative overflow-hidden"
+          className="hidden md:block relative overflow-hidden"
           style={{
             maskImage:
               "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
@@ -139,8 +147,6 @@ const TestimonialsSection = () => {
           }}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
-          onTouchStart={() => setIsPaused(true)}
-          onTouchEnd={() => setIsPaused(false)}
         >
           <div
             className="flex gap-4 sm:gap-6 w-max items-stretch animate-marquee"
