@@ -93,18 +93,20 @@ const Navbar = () => {
                   {item.label}
                 </a>
               ))}
-              <div className="flex items-center gap-3 py-1">
-                <a
-                  href={INSTAGRAM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Síguenos en Instagram"
-                  className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-tr from-[#f09433] via-[#e6683c] via-[#dc2743] via-[#cc2366] to-[#bc1888] shadow-elevated transition-transform hover:scale-105"
-                >
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-white pl-1 pr-6 py-1 shadow-md transition-transform hover:scale-105 self-center"
+                aria-label="Síguenos en Instagram"
+              >
+                <span className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-tr from-[#f09433] via-[#e6683c] via-[#dc2743] via-[#cc2366] to-[#bc1888]">
                   <Instagram size={20} className="text-white" strokeWidth={2} />
-                </a>
-                <span className="text-sm font-medium text-muted-foreground">Síguenos en Instagram</span>
-              </div>
+                </span>
+                <span className="ml-3 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#f09433] to-[#bc1888]">
+                  Síguenos en Instagram!
+                </span>
+              </a>
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
