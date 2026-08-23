@@ -111,6 +111,16 @@ const TestimonialCard = ({
 
 const TestimonialsSection = () => {
   const [isPaused, setIsPaused] = useState(false);
+  const mobileTrackRef = useRef<HTMLDivElement>(null);
+
+  const scrollMobile = (dir: number) => {
+    const el = mobileTrackRef.current;
+    if (!el) return;
+    const card = el.firstElementChild as HTMLElement | null;
+    const step = card ? card.offsetWidth + 12 : el.clientWidth * 0.85;
+    el.scrollBy({ left: dir * step, behavior: "smooth" });
+  };
+
 
   return (
     <section id="testimonios" className="py-16 sm:py-24 bg-secondary/40">
