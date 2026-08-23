@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
 const GOOGLE_REVIEWS_URL =
   "https://www.google.com/search?q=clinica+dental+mundo+medico+colina#lrd=0x9662bbb162cdc551:0x168184d502f80b24,1";
@@ -111,6 +111,16 @@ const TestimonialCard = ({
 
 const TestimonialsSection = () => {
   const [isPaused, setIsPaused] = useState(false);
+  const mobileTrackRef = useRef<HTMLDivElement>(null);
+
+  const scrollMobile = (dir: number) => {
+    const el = mobileTrackRef.current;
+    if (!el) return;
+    const card = el.firstElementChild as HTMLElement | null;
+    const step = card ? card.offsetWidth + 12 : el.clientWidth * 0.85;
+    el.scrollBy({ left: dir * step, behavior: "smooth" });
+  };
+
 
   return (
     <section id="testimonios" className="py-16 sm:py-24 bg-secondary/40">
@@ -129,11 +139,37 @@ const TestimonialsSection = () => {
           </p>
         </motion.div>
 
-        {/* Móvil: lista vertical estática y compacta */}
-        <div className="md:hidden flex flex-col gap-3">
-          {testimonials.slice(0, 6).map((t, i) => (
-            <TestimonialCard key={i} t={t} className="w-full" />
-          ))}
+        {/* Móvil: carrusel horizontal con flechas */}
+        <div className="md:hidden relative">
+          <div
+            ref={mobileTrackRef}
+            className="flex gap-3 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {testimonials.map((t, i) => (
+              <TestimonialCard
+                key={i}
+                t={t}
+                className="w-[80vw] max-w-[300px] shrink-0 snap-center"
+              />
+            ))}
+          </div>
+
+          <button
+            type="button"
+            aria-label="Anterior"
+            onClick={() => scrollMobile(-1)}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 rounded-full bg-card/95 text-primary shadow-elevated p-2 backdrop-blur"
+          >
+            <ChevronLeft size={18} />
+          </button>
+          <button
+            type="button"
+            aria-label="Siguiente"
+            onClick={() => scrollMobile(1)}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 rounded-full bg-card/95 text-primary shadow-elevated p-2 backdrop-blur"
+          >
+            <ChevronRight size={18} />
+          </button>
         </div>
 
         {/* Tablet y desktop: carrusel */}
