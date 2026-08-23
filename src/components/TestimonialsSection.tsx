@@ -111,10 +111,10 @@ const TestimonialCard = ({
 
 const TestimonialsSection = () => {
   const [isPaused, setIsPaused] = useState(false);
-  const [index, setIndex] = useState(0);
+  const [[index, dir], setState] = useState<[number, number]>([0, 1]);
 
-  const move = (dir: number) =>
-    setIndex((i) => (i + dir + testimonials.length) % testimonials.length);
+  const move = (d: number) =>
+    setState(([i]) => [(i + d + testimonials.length) % testimonials.length, d]);
 
   return (
     <section id="testimonios" className="py-16 sm:py-24 bg-secondary/40">
@@ -133,39 +133,46 @@ const TestimonialsSection = () => {
           </p>
         </motion.div>
 
-        {/* Móvil: carrusel con flechas fuera de la tarjeta */}
-        <div className="md:hidden flex items-center gap-2">
-          <button
-            type="button"
-            aria-label="Anterior"
-            onClick={() => move(-1)}
-            className="shrink-0 rounded-full bg-card text-primary shadow-elevated p-2"
-          >
-            <ChevronLeft size={18} />
-          </button>
-
-          <div className="flex-1 overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${index * 100}%)` }}
-            >
-              {testimonials.map((t, i) => (
-                <div key={i} className="w-full shrink-0 px-1">
-                  <TestimonialCard t={t} className="w-full" />
-                </div>
-              ))}
-            </div>
+        {/* Móvil: carrusel con loop infinito y flechas debajo */}
+        <div className="md:hidden">
+          <div className="relative overflow-hidden">
+            <AnimatePresence initial={false} mode="wait" custom={dir}>
+              <motion.div
+                key={index}
+                custom={dir}
+                initial={{ opacity: 0, x: dir > 0 ? 60 : -60 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: dir > 0 ? -60 : 60 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+                <TestimonialCard t={testimonials[index]} className="w-full" />
+              </motion.div>
+            </AnimatePresence>
           </div>
 
-          <button
-            type="button"
-            aria-label="Siguiente"
-            onClick={() => move(1)}
-            className="shrink-0 rounded-full bg-card text-primary shadow-elevated p-2"
-          >
-            <ChevronRight size={18} />
-          </button>
+          <div className="mt-4 flex items-center justify-center gap-6">
+            <button
+              type="button"
+              aria-label="Anterior"
+              onClick={() => move(-1)}
+              className="rounded-full bg-card text-primary shadow-elevated p-2"
+            >
+              <ChevronLeft size={18} />
+            </button>
+            <span className="text-xs text-muted-foreground tabular-nums">
+              {index + 1} / {testimonials.length}
+            </span>
+            <button
+              type="button"
+              aria-label="Siguiente"
+              onClick={() => move(1)}
+              className="rounded-full bg-card text-primary shadow-elevated p-2"
+            >
+              <ChevronRight size={18} />
+            </button>
+          </div>
         </div>
+
 
 
         {/* Tablet y desktop: carrusel */}
