@@ -82,13 +82,13 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-background border-b border-border overflow-hidden"
           >
-          <div className="container py-4 flex flex-col gap-4">
+          <div className="container py-8 flex flex-col items-center justify-center gap-6 min-h-[calc(100vh-4rem)]">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="text-base font-medium text-foreground py-2"
+                  className="text-lg font-medium text-foreground py-2 text-center"
                 >
                   {item.label}
                 </a>
