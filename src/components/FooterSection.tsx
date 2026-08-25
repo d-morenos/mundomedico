@@ -43,7 +43,7 @@ const FooterSection = () => {
                   <p className="text-primary-foreground/70 text-sm tabular-nums">
                     Fijo: (2) 2844 9710
                   </p>
-                  <p className="text-primary-foreground/70 text-sm tabular-nums whitespace-nowrap">
+                  <p className="text-primary-foreground/70 text-sm tabular-nums lg:whitespace-nowrap">
                     WhatsApp: +56 9 6334 3550
                   </p>
                 </div>
