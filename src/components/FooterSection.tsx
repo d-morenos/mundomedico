@@ -1,7 +1,7 @@
 import { MapPin, Phone, Clock, Coffee, Instagram } from "lucide-react";
 
 const WHATSAPP_URL = "https://wa.me/message/Y5IWA6TBD4SRM1";
-const INSTAGRAM_URL = "https://www.instagram.com/clinicamundomedico?igsi=d2tsb2Rnc3hrcGNt";
+const INSTAGRAM_URL = "https://www.instagram.com/clinicamundomedico";
 
 const FooterSection = () => {
   return (
