@@ -9,10 +9,10 @@ const FooterSection = () => {
       <div className="container">
         <h2 className="font-heading text-3xl font-bold mb-6 text-center">Encuéntranos</h2>
 
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[5fr_7fr] lg:items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-12 lg:grid-cols-[5fr_7fr] lg:items-center">
           {/* Info + WhatsApp */}
           <div className="flex flex-col justify-center">
-            <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-x-8">
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-x-8">
               <div className="flex items-start gap-3">
                 <MapPin size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
                 <div>
@@ -90,7 +90,7 @@ const FooterSection = () => {
 
           {/* Map */}
           <div className="flex items-center justify-center">
-            <div className="rounded-2xl overflow-hidden shadow-card w-full h-[320px] lg:h-[360px]">
+            <div className="rounded-2xl overflow-hidden shadow-card w-full h-[320px] md:h-[360px] lg:h-[360px]">
               <iframe
                 src="https://www.google.com/maps?q=-33.204922728175774,-70.67528928777486&output=embed"
                 width="100%"
