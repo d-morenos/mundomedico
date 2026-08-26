@@ -11,8 +11,8 @@ const FooterSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-12 lg:grid-cols-[5fr_7fr] lg:items-center">
           {/* Info + WhatsApp */}
-          <div className="flex flex-col justify-center">
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 lg:gap-y-6">
+          <div className="flex flex-col justify-center md:items-start items-center text-center md:text-left">
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-x-6 md:gap-y-6 lg:gap-x-8 lg:gap-y-6 justify-items-center md:justify-items-start">
               <div className="flex items-start gap-3">
                 <MapPin size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
                 <div>
