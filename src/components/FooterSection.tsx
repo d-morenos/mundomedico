@@ -13,8 +13,8 @@ const FooterSection = () => {
           {/* Info + WhatsApp */}
           <div className="flex flex-col justify-center md:items-start items-center text-center md:text-left">
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-x-6 md:gap-y-6 lg:gap-x-8 lg:gap-y-6 justify-items-center md:justify-items-start">
-              <div className="flex items-start gap-3 md:text-left text-center justify-center md:justify-start">
-                <MapPin size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-1 md:gap-3 text-center md:text-left">
+                <MapPin size={20} strokeWidth={1.5} className="text-primary md:mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Dirección</p>
                   <p className="text-primary-foreground/70 text-sm">
@@ -23,8 +23,8 @@ const FooterSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 md:text-left text-center justify-center md:justify-start">
-                <Clock size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-1 md:gap-3 text-center md:text-left">
+                <Clock size={20} strokeWidth={1.5} className="text-primary md:mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Horario</p>
                   <p className="text-primary-foreground/70 text-sm tabular-nums">
@@ -36,8 +36,8 @@ const FooterSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 md:text-left text-center justify-center md:justify-start">
-                <Phone size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-1 md:gap-3 text-center md:text-left">
+                <Phone size={20} strokeWidth={1.5} className="text-primary md:mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Teléfonos</p>
                   <p className="text-primary-foreground/70 text-sm tabular-nums">
@@ -50,8 +50,8 @@ const FooterSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 md:text-left text-center justify-center md:justify-start">
-                <Coffee size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-1 md:gap-3 text-center md:text-left">
+                <Coffee size={20} strokeWidth={1.5} className="text-primary md:mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Pausa Almuerzo</p>
                   <p className="text-primary-foreground/70 text-sm tabular-nums">
