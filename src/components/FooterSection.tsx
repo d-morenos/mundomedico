@@ -36,7 +36,7 @@ const FooterSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-3 md:text-left text-center justify-center md:justify-start">
                 <Phone size={20} strokeWidth={1.5} className="text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Teléfonos</p>
