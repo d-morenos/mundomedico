@@ -77,28 +77,45 @@ const Navbar = () => {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-background border-b border-border overflow-hidden"
+            initial={{ opacity: 0, height: 0, y: -8 }}
+            animate={{ opacity: 1, height: "auto", y: 0 }}
+            exit={{ opacity: 0, height: 0, y: -8 }}
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:hidden bg-background border-b border-border overflow-hidden origin-top"
           >
-          <div className="container py-8 flex flex-col items-center justify-center gap-6 min-h-[calc(100vh-4rem)]">
+            <motion.div
+              variants={{
+                hidden: { opacity: 0 },
+                show: { opacity: 1, transition: { staggerChildren: 0.05, delayChildren: 0.08 } },
+              }}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="container pt-6 pb-8 flex flex-col items-center gap-4"
+            >
               {navItems.map((item) => (
-                <a
+                <motion.a
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="text-lg font-medium text-foreground py-2 text-center"
+                  variants={{
+                    hidden: { opacity: 0, y: 10 },
+                    show: { opacity: 1, y: 0 },
+                  }}
+                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                  className="text-lg font-medium text-foreground py-1.5 text-center w-full rounded-lg transition-colors duration-200 hover:text-primary hover:bg-primary/5 active:bg-primary/10 active:scale-[0.97]"
                 >
                   {item.label}
-                </a>
+                </motion.a>
               ))}
-              <a
+              <motion.a
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-white pl-1 pr-6 py-1 shadow-md transition-transform hover:scale-105 self-center"
                 aria-label="Síguenos en Instagram"
+                variants={{ hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0 } }}
+                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                className="inline-flex items-center justify-center rounded-full bg-white pl-1 pr-6 py-1 shadow-md self-center transition-all duration-200 hover:scale-105 active:scale-95"
               >
                 <span className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-tr from-[#f09433] via-[#e6683c] via-[#dc2743] via-[#cc2366] to-[#bc1888]">
                   <Instagram size={20} className="text-white" strokeWidth={2} />
@@ -106,17 +123,19 @@ const Navbar = () => {
                 <span className="ml-3 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#f09433] to-[#bc1888]">
                   Síguenos en Instagram!
                 </span>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-3 text-base font-medium text-primary-foreground"
+                variants={{ hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0 } }}
+                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-3 text-base font-medium text-primary-foreground shadow-elevated transition-all duration-200 hover:opacity-90 active:scale-95"
               >
                 <Phone size={18} strokeWidth={1.5} />
                 Reserva tu hora por WhatsApp
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
