@@ -14,7 +14,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="md:flex md:flex-col md:items-center md:text-center"
+            className="flex flex-col items-center text-center md:items-center md:text-center"
           >
             <div className="inline-flex items-center gap-2 rounded-full bg-muted px-4 py-1.5 text-sm text-muted-foreground mb-6">
               <MapPin size={14} strokeWidth={1.5} />
