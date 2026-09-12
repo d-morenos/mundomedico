@@ -61,7 +61,7 @@ const FooterSection = () => {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-col items-center gap-4">
+            <div className="mt-8 flex flex-col items-center gap-4 md:mx-auto">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
