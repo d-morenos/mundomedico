@@ -55,7 +55,7 @@ const HeroSection = () => {
           >
             <div className="rounded-2xl overflow-hidden shadow-card outline outline-1 outline-black/10 -outline-offset-1">
               <img
-                src={heroImage.url}
+                src={heroImageUrl}
                 alt="Instalaciones modernas de Clínica Dental Mundo Médico en Colina"
                 className="w-full h-[320px] md:h-[460px] object-cover"
                 loading="eager"
