@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import constanza from "@/assets/Constanza.png.asset.json";
-import lorena from "@/assets/Lorena.png.asset.json";
+import constanzaPhoto from "@/assets/Constanza.png";
+import lorenaPhoto from "@/assets/Lorena.png";
 
 const team = [
-  { name: "Dra. Constanza Moreno", role: "Odontóloga", initials: "CM", photo: constanza.url },
-  { name: "Dra. Lorena Salazar", role: "Ortodoncista", initials: "LS", photo: lorena.url },
+  { name: "Dra. Constanza Moreno", role: "Odontóloga", initials: "CM", photo: constanzaPhoto },
+  { name: "Dra. Lorena Salazar", role: "Ortodoncista", initials: "LS", photo: lorenaPhoto },
 ];
 
 const container = {

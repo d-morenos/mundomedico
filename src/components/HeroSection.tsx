@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Phone, MapPin } from "lucide-react";
-import heroImage from "@/assets/hero-clinic.jpg.asset.json";
+import heroImageUrl from "@/assets/hero-clinic.jpg";
 
 const WHATSAPP_URL = "https://wa.me/message/Y5IWA6TBD4SRM1";
 
@@ -55,7 +55,7 @@ const HeroSection = () => {
           >
             <div className="rounded-2xl overflow-hidden shadow-card outline outline-1 outline-black/10 -outline-offset-1">
               <img
-                src={heroImage.url}
+                src={heroImageUrl}
                 alt="Instalaciones modernas de Clínica Dental Mundo Médico en Colina"
                 className="w-full h-[320px] md:h-[460px] object-cover"
                 loading="eager"
